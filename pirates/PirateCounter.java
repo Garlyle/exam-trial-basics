@@ -20,7 +20,7 @@ public class PirateCounter{
     // - have wooden leg and
     // - have more than 15 gold
     System.out.println("Pirates with wooden legs: " + getPiratesWithWoodenLeg(pirates));
-    System.out.println("Pirates with more than 15 gold: " + getPiratesWithPlentyGold(pirates));
+    System.out.println("Pirates with more than " + PLENTY_GOLD + " gold: " + getPiratesWithPlentyGold(pirates));
 
   }
 
