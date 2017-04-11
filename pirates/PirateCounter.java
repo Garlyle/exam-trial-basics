@@ -2,6 +2,8 @@ import java.util.*;
 
 public class PirateCounter{
 
+  static final int PLENTY_GOLD = 15;
+
   public static void main(String... args){
     ArrayList<Pirate> pirates = new ArrayList<>();
 
@@ -17,5 +19,28 @@ public class PirateCounter{
     // And returns a list of names containing the pirates that
     // - have wooden leg and
     // - have more than 15 gold
+    System.out.println("Pirates with wooden legs: " + getPiratesWithWoodenLeg(pirates));
+    System.out.println("Pirates with more than 15 gold: " + getPiratesWithPlentyGold(pirates));
+
+  }
+
+  private static ArrayList<String> getPiratesWithWoodenLeg(ArrayList<Pirate> pirates) {
+    ArrayList<String> names = new ArrayList<>();
+    for (Pirate pirate : pirates) {
+      if (pirate.hasWoodenLeg) {
+        names.add(pirate.name);
+      }
+    }
+    return names;
+  }
+
+  private static ArrayList<String> getPiratesWithPlentyGold(ArrayList<Pirate> pirates) {
+    ArrayList<String> names = new ArrayList<>();
+    for (Pirate pirate : pirates) {
+      if (pirate.gold > PLENTY_GOLD) {
+        names.add(pirate.name);
+      }
+    }
+    return names;
   }
 }
